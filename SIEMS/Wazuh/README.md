@@ -209,7 +209,7 @@ agent.conf
         <options>no_full_log</options>
         <description>Sysmon - Event 9: RawAccessRead.</description>
     </rule>
-    <rule id="101110" level="5">
+    <rule id="101110" level="5"> 
         <if_sid>61612</if_sid>
         <options>no_full_log</options>
         <description>Sysmon - Event 10: ProcessAccess.</description>
