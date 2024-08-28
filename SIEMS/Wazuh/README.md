@@ -41,7 +41,8 @@ It is still possible to perform these labs with VirtualBox (OVA's) or other virt
 	- local file -> VHD(X) -> local file -> dynamic
 ![](_resources/wazuh-2.png)
 
-- Grab the newly created vhdx and add it to a GENERATION #1 system in Hyper-V. Make sure it's connected to your newly created vSwitch. In my case it is named "vEthernet (MDT-net)". Set a static IP.
+- Grab the newly created vhdx and add it to a GENERATION #1 system in Hyper-V.   
+Make sure it's connected to your newly created vSwitch. In my case it is named "vEthernet (MDT-net)". Set a static IP.
 ![](_resources/wazuh-3.png)
 
 - The login credentials for the machine and ssh. NOT the web-interface.   
@@ -96,9 +97,9 @@ Index=666
 
 ```
 
-- Log into wazuh using admin:admin @ https://10.25.0.1 (in this case)
-![](_resources/wazuh-4.png)
-![](_resources/wazuh-5.png)
+- Log into wazuh using admin:admin @ https://10.25.0.1 (in this case)   
+![](_resources/wazuh-4.png)   
+![](_resources/wazuh-5.png)   
 
 - Add a "endpoint group" and settings.
 	- Go to "Server management" -> Endpoint groups -> Add new group. Then edit the group (press the pen)
@@ -155,7 +156,8 @@ agent.conf
 
 - Add sysmon custom rules handling for wazuh.
 	- Go to "Server management" -> Rules -> Custom rules -> add new rules file.
-	- Here is my config. I mapped missing sysmon ID's to wazuh marked "pwned by jml". I have currently found no way to map EID 27,28,29 as it seems wazuh 4.8.2 does not currently support them by default.
+	- Here is my config. I mapped missing sysmon ID's to wazuh marked "pwned by jml".    
+	I have currently found no way to map EID 27,28,29 as it seems wazuh 4.8.2 does not currently support them by default.
 
 ![](_resources/wazuh-6.png)
 
